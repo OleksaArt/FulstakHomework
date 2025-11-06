@@ -10,17 +10,17 @@
  * lastName - будь-яке прізвище, рядок
  * age - будь-який вік, число
  */
-// const userObj = {
-//     firstName : "Дем'ян",
-//     lastName : "Григоренко",
-//     age : 18,
-//     work : "Студент",
-//     fullName() {
-//         return `${this.firstName} ${this.lastName}`;
-//     },
-// }
+const userObj = {
+    firstName : "Дем'ян",
+    lastName : "Григоренко",
+    age : 18,
+    work : "Студент",
+    fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    },
+}
 
-// console.log(userObj)
+console.log(userObj)
 
 /*
  * #2
@@ -33,9 +33,9 @@
  * userObj.fullName() → 'John Smith'.
  */
 
-// console.log(userObj.fullName()) // John Smith
+console.log(userObj.fullName()) // John Smith
 
-// console.log(userObj.fullName());
+console.log(userObj.fullName());
 /*
  * #3
  *
@@ -48,14 +48,14 @@
 
 // console.log(defUpperStr('My text')) // MY TEXT
 // console.log(defUpperStr())             // DEFAULT TEXT
-// let text = "Привіт світе"
+let text = "Привіт світе"
 
-// function defUpperStr(text) {
-//   return (text || 'Default text').toUpperCase();
-// }
+function defUpperStr(text) {
+  return (text || 'Default text').toUpperCase();
+}
 
-// console.log(defUpperStr(text)); // MY TEXT
-// console.log(defUpperStr());
+console.log(defUpperStr(text)); // MY TEXT
+console.log(defUpperStr());
 /*
  * #4
  *
@@ -76,16 +76,16 @@
 // console.log(evenFn(10)) // [2, 4, 6, 8, 10]
 // console.log(evenFn(15)) // [2, 4, 6, 8, 10, 12, 14]
 // console.log(evenFn(20)) // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
-// function evenFn(n) {
-//   const result = [];
-//   for (let i = 1; i <= n; i++) {
-//     i % 2 === 0 && result.push(i);
-//   }
-//   return result;
-// }
-// console.log(evenFn(10)); 
-// console.log(evenFn(15));
-// console.log(evenFn(20));
+function evenFn(n) {
+  const result = [];
+  for (let i = 1; i <= n; i++) {
+    i % 2 === 0 && result.push(i);
+  }
+  return result;
+}
+console.log(evenFn(10)); 
+console.log(evenFn(15));
+console.log(evenFn(20));
 /*
  * #5
  *
@@ -102,41 +102,41 @@
  * '2' → null
  * У реалізації функції обов'язково мають бути використані оператори switch / case / default.
  */
-// function weekFn(n){
-//   const result = [];
-//   switch (n) {
-//       case 1:
-//           console.log("Понеділок");
-//           break;
-//       case 2:
-//           console.log("Вівторок");
-//           break;
-//       case 3:
-//           console.log("Середа");
-//           break;
-//       case 4:
-//         console.log("Четвер");
-//         break;
-//       case 5:
-//         console.log("П'ятниця");
-//         break;
-//       case 6:
-//         console.log("Cубота");
-//         break;
-//       case 7:
-//         console.log("Неділя");
-//         break;
-//       default:
-//           console.log(null);
-//   }
-//   return result;
-// }
-// console.log(weekFn(1.2))   // 'Понеділок'
-// console.log(weekFn(3))   // 'Середа'
-// console.log(weekFn(7))   // 'Неділя'
-// console.log(weekFn(9))   // null
-// console.log(weekFn(1.5)) // null
-// console.log(weekFn('2')) // null
+function weekFn(n){
+  const result = [];
+  switch (n) {
+      case 1:
+          console.log("Понеділок");
+          break;
+      case 2:
+          console.log("Вівторок");
+          break;
+      case 3:
+          console.log("Середа");
+          break;
+      case 4:
+        console.log("Четвер");
+        break;
+      case 5:
+        console.log("П'ятниця");
+        break;
+      case 6:
+        console.log("Cубота");
+        break;
+      case 7:
+        console.log("Неділя");
+        break;
+      default:
+          console.log(null);
+  }
+  return result;
+}
+console.log(weekFn(1))   // 'Понеділок'
+console.log(weekFn(3))   // 'Середа'
+console.log(weekFn(7))   // 'Неділя'
+console.log(weekFn(9))   // null
+console.log(weekFn(1.5)) // null
+console.log(weekFn('2')) // null
 
 /*
  * #6
@@ -154,35 +154,32 @@
  * При виконанні завдання допускається використовувати тільки тернарний оператор ?.
  * Використання операторів if, switch - заборонено.
  */
-// function ageClassification(n){
-//   const result = []
+function ageClassification(n) {
+  return (n < 0 || n > 122) ? null :
+         (n <= 24) ? 'Дитинство' :
+         (n <= 44) ? 'Молодість' :
+         (n <= 65) ? 'Зрілість' :
+         (n <= 75) ? 'Старість' :
+         (n <= 90) ? 'Довголіття' :
+         'Рекорд';
+}
 
-//   n = (n <= 0) ? console.log(null):
-//       (n <= 24) ? console.log("Дитинство"):
-//       (n <= 44) ? console.log("Молодість"):
-//       (n <= 65) ? console.log("Зрілість"):
-//       (n <= 75) ? console.log("Старість"):
-//       (n <= 90) ? console.log("Довголіття"):
-//       (n <= 122) ? console.log("Рекорд"):
-//       console.log(null);
-//   return result;
-// }
-// console.log('    -1 :', ageClassification(-1)) // -1 : null
-// console.log('     0 :', ageClassification(0)) // 0 : null
-// console.log('     1 :', ageClassification(1)) // 1 : Дитинство
-// console.log('    24 :', ageClassification(24)) // 24 : Дитинство
-// console.log(' 24.01 :', ageClassification(24.01)) // 24.01 : Молодість
-// console.log('    44 :', ageClassification(44)) // 44 : Молодість
-// console.log(' 44.01 :', ageClassification(44.01)) // 44.01 : Зрілість
-// console.log('    65 :', ageClassification(65)) // 65 : Зрілість
-// console.log('  65.1 :', ageClassification(65.1)) // 65.1 : Старість
-// console.log('    75 :', ageClassification(75)) // 75 : Старість
-// console.log(' 75.01 :', ageClassification(75.01)) // 75.01 : Довголіття
-// console.log('    90 :', ageClassification(90)) // 90 : Довголіття
-// console.log(' 90.01 :', ageClassification(90.01)) // 90.01 : Рекорд
-// console.log('   122 :', ageClassification(122)) // 122 : Рекорд
-// console.log('122.01 :', ageClassification(122.01)) // 122.01 : null
-// console.log('   150 :', ageClassification(150)) // 150 : null
+console.log('    -1 :', ageClassification(-1)) // -1 : null
+console.log('     0 :', ageClassification(0)) // 0 : null
+console.log('     1 :', ageClassification(1)) // 1 : Дитинство
+console.log('    24 :', ageClassification(24)) // 24 : Дитинство
+console.log(' 24.01 :', ageClassification(24.01)) // 24.01 : Молодість
+console.log('    44 :', ageClassification(44)) // 44 : Молодість
+console.log(' 44.01 :', ageClassification(44.01)) // 44.01 : Зрілість
+console.log('    65 :', ageClassification(65)) // 65 : Зрілість
+console.log('  65.1 :', ageClassification(65.1)) // 65.1 : Старість
+console.log('    75 :', ageClassification(75)) // 75 : Старість
+console.log(' 75.01 :', ageClassification(75.01)) // 75.01 : Довголіття
+console.log('    90 :', ageClassification(90)) // 90 : Довголіття
+console.log(' 90.01 :', ageClassification(90.01)) // 90.01 : Рекорд
+console.log('   122 :', ageClassification(122)) // 122 : Рекорд
+console.log('122.01 :', ageClassification(122.01)) // 122.01 : null
+console.log('   150 :', ageClassification(150)) // 150 : null
 
 /*
  Блок тестирования, везде должны быть true:
@@ -203,6 +200,22 @@
  console.log('122.01 :', ageClassification(122.01) === null); // 122.01 : null
  console.log('   150 :', ageClassification(150) === null); // 150 : null
 */
+ console.log('    -1 :', ageClassification(-1) === null); // -1 : null
+ console.log('     0 :', ageClassification(0) === null) // 0 : null
+ console.log('     1 :', ageClassification(1) === 'Дитинство'); // 1 : Дитинство
+ console.log('    24 :', ageClassification(24) === 'Дитинство'); // 24 : Дитинство
+ console.log(' 24.01 :', ageClassification(24.01) === 'Молодість'); // 24.01 : Молодість
+ console.log('    44 :', ageClassification(44) === 'Молодість'); // 44 : Молодість
+ console.log(' 44.01 :', ageClassification(44.01) === 'Зрілість'); // 44.01 : Зрілість
+ console.log('    65 :', ageClassification(65) === 'Зрілість'); // 65 : Зрілість
+ console.log('  65.1 :', ageClassification(65.1) === 'Старість'); // 65.1 : Старість
+ console.log('    75 :', ageClassification(75) === 'Старість'); // 75 : Старість
+ console.log(' 75.01 :', ageClassification(75.01) === 'Довголіття'); // 75.01 : Довголіття
+ console.log('    90 :', ageClassification(90) === 'Довголіття'); // 90 : Довголіття
+ console.log(' 90.01 :', ageClassification(90.01) === 'Рекорд'); // 90.01 : Рекорд
+ console.log('   122 :', ageClassification(122) === 'Рекорд'); // 122 : Рекорд
+ console.log('122.01 :', ageClassification(122.01) === null); // 122.01 : null
+ console.log('   150 :', ageClassification(150) === null); // 150 : null
 
 /*
  * #7
@@ -225,18 +238,18 @@
 // console.log(oddFn(15)) // [1, 3, 5, 7, 9, 11, 13, 15]
 // console.log(oddFn(20)) // [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 
-// function oddFn(n) {
-//   const result = [];
-//   let i = 0; // 
-//   do {
-//     i++; 
-//     i % 2 !== 0 && result.push(i);
-//   } while (i < n);
+function oddFn(n) {
+  const result = [];
+  let i = 0; // 
+  do {
+    i++; 
+    i % 2 !== 0 && result.push(i);
+  } while (i < n);
 
-//   return result;
-// }
+  return result;
+}
 
-// console.log(oddFn(20))
+console.log(oddFn(20))
 /*
  * #8
  *
