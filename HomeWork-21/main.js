@@ -34,3 +34,11 @@ function createDamage(strenght, health, defense){
         return health - damage;
     };
 };
+
+console.log(createDamage(user.strenght, goblin.health, goblin.defense))
+
+const result = createDamage(user.strenght, goblin.health, goblin.defense)
+
+goblin.health = result
+
+console.log(goblin)
