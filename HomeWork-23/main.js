@@ -66,23 +66,6 @@ console.log(calorieCalculator.getProductCalories('Apple')) // Product not found
  * Застосування new Set() для внутрішнього сховища імен користувачів у конструкторі класу.
  */
 
-// class UniqueUsernames {
-//   constructor() {
-//     // code here
-//   }
-
-//   addUser(username) {
-//     // code here
-//   }
-
-//   exists(username) {
-//     // code here
-//   }
-
-//   count() {
-//     // code here
-//   }
-// }
 
 class UniqueUsernames {
     constructor() {
